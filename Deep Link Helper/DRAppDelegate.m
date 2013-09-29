@@ -9,7 +9,7 @@
 #import "DRAppDelegate.h"
 
 #import "DRMasterViewController.h"
-#import "iRate.h"
+#import <iRate/iRate.h>
 #import <Crashlytics/Crashlytics.h>
 
 @implementation DRAppDelegate
