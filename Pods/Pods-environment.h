@@ -6,6 +6,18 @@
 // project.
 
 
+// DHCShakeNotifier
+#define COCOAPODS_POD_AVAILABLE_DHCShakeNotifier
+#define COCOAPODS_VERSION_MAJOR_DHCShakeNotifier 0
+#define COCOAPODS_VERSION_MINOR_DHCShakeNotifier 2
+#define COCOAPODS_VERSION_PATCH_DHCShakeNotifier 0
+
+// SDScreenshotCapture
+#define COCOAPODS_POD_AVAILABLE_SDScreenshotCapture
+#define COCOAPODS_VERSION_MAJOR_SDScreenshotCapture 1
+#define COCOAPODS_VERSION_MINOR_SDScreenshotCapture 1
+#define COCOAPODS_VERSION_PATCH_SDScreenshotCapture 0
+
 // iRate
 #define COCOAPODS_POD_AVAILABLE_iRate
 #define COCOAPODS_VERSION_MAJOR_iRate 1

@@ -12,6 +12,13 @@
 #import <iRate/iRate.h>
 #import <Crashlytics/Crashlytics.h>
 
+#if DEBUG
+#import <SDScreenshotCapture/SDScreenshotCapture.h>
+#if TARGET_IPHONE_SIMULATOR
+#import <DHCShakeNotifier/UIWindow+DHCShakeRecognizer.h>
+#endif
+#endif
+
 @implementation DRAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -32,6 +39,14 @@
     controller.managedObjectContext = self.managedObjectContext;
 
     [Crashlytics startWithAPIKey:@"f1c3c195dc844f23c69a79bc77f3b5195edcbdcd"];
+
+#if DEBUG
+#if TARGET_IPHONE_SIMULATOR
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userWantsToTakeScreenshot:) name:DHCSHakeNotificationName object:nil];
+#else
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userWantsToTakeScreenshot:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+#endif
+#endif
 
     return YES;
 }
@@ -76,6 +91,13 @@
             abort();
         } 
     }
+}
+
+#pragma mark - Private
+
+- (void)userWantsToTakeScreenshot:(NSNotification *)notification
+{
+    [SDScreenshotCapture takeScreenshotToActivityViewController];
 }
 
 #pragma mark - Core Data stack

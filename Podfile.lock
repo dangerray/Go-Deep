@@ -1,10 +1,16 @@
 PODS:
+  - DHCShakeNotifier (0.2.0)
   - iRate (1.7.5)
+  - SDScreenshotCapture (1.1)
 
 DEPENDENCIES:
+  - DHCShakeNotifier
   - iRate
+  - SDScreenshotCapture
 
 SPEC CHECKSUMS:
+  DHCShakeNotifier: 5f3f5327bcc86eda75524038a3f9426797e61a90
   iRate: 8de5eaeca627c7708c8aec279eeb8daf2551c774
+  SDScreenshotCapture: 84bde211ba3ffa4656c4093f9ee2a762bb4c121f
 
 COCOAPODS: 0.25.0

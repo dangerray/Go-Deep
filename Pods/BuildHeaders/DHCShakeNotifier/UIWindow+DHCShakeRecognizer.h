@@ -1,0 +1,1 @@
+../../DHCShakeNotifier/DHCShakeNotifier/UIWindow+DHCShakeRecognizer.h
