@@ -35,17 +35,6 @@
 
 #pragma mark - Actions
 
-- (IBAction)shareButtonPressed:(id)sender
-{
-    NSString *shareText = NSLocalizedString(@"Check out Deep Link Helper, an app to help you test deep links: https://itunes.apple.com/us/app/deep-link-helper-open-any/id717821942?ls=1&mt=8", nil);
-    UIWindow *window = [[UIApplication sharedApplication].delegate performSelector:@selector(window)];
-    UIViewController *rootViewController = window.rootViewController;
-    NSAssert(window, @"Application delegate should have a window property");
-    NSAssert(rootViewController, @"Window should have a root view controller");
-    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[ shareText ] applicationActivities:nil];
-    [rootViewController presentViewController:controller animated:YES completion:nil];
-}
-
 - (void)insertNewObject:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];

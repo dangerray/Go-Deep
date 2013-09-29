@@ -69,19 +69,14 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wqb-uq-yog"/>
                         <barButtonItem title="About" id="PlU-4H-ffk">
                             <connections>
                                 <segue destination="Rox-EY-hqG" kind="modal" id="4Eq-kE-b0I"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OdD-wO-b9v"/>
-                        <barButtonItem title="Share" id="eam-I8-wUh">
-                            <connections>
-                                <action selector="shareButtonPressed:" destination="pGg-6v-bdr" id="OcK-J8-YKK"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Deep Links" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Links" id="tQt-TN-PWz"/>
                     <connections>
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="addNewLink" id="sJx-d8-fwr"/>
                     </connections>
@@ -256,6 +251,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Close" id="qNv-yy-mF8">
                             <connections>
                                 <action selector="closeButtonPressed:" destination="f62-3S-pOV" id="r8J-JV-p6p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5bd-RD-3Lc">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="f62-3S-pOV" id="W7X-yu-qZr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
