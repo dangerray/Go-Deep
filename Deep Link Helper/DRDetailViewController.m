@@ -43,9 +43,6 @@
         self.urlTextField.text = self.link.url;
 
         [self updateUrlTextFieldBorderColor];
-
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.titleTextField];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(urlTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.urlTextField];
     }
 }
 
@@ -54,13 +51,9 @@
     [super viewDidLoad];
 
     [self configureView];
-}
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    [self.titleTextField becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.titleTextField];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(urlTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self.urlTextField];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -68,6 +61,8 @@
     [super viewDidAppear:animated];
 
     HTAssertSimulatorOnly(self.link, nil);
+
+    [self.titleTextField becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

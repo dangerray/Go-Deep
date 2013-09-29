@@ -75,7 +75,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="OdD-wO-b9v"/>
-                        <barButtonItem title="Share" id="eam-I8-wUh"/>
+                        <barButtonItem title="Share" id="eam-I8-wUh">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="pGg-6v-bdr" id="OcK-J8-YKK"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Deep Links" id="tQt-TN-PWz"/>
                     <connections>
@@ -172,6 +176,10 @@
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Edit Link" id="cra-N8-TIN"/>
+                    <connections>
+                        <outlet property="titleTextField" destination="7uT-Tb-OtP" id="P9q-1f-wt7"/>
+                        <outlet property="urlTextField" destination="QBc-Qk-hev" id="vsT-FM-cMk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
