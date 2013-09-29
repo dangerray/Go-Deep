@@ -140,8 +140,12 @@
 
 - (void)deleteLink
 {
-    [self.managedObjectContext deleteObject:self.link];
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.link)
+    {
+        [self.managedObjectContext deleteObject:self.link];
+        self.link = nil;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)save
