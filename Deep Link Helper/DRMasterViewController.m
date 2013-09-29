@@ -61,7 +61,7 @@
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
                                     animated:NO
                               scrollPosition:UITableViewScrollPositionNone];
-        [self performSegueWithIdentifier:@"showDetail" sender:self];
+        [self performSegueWithIdentifier:@"addNewLink" sender:self];
     }
 }
 
@@ -139,11 +139,23 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DRLink *link = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell *)sender];
+        DRLink *link = [self.fetchedResultsController objectAtIndexPath:indexPath];
         DRDetailViewController *viewController = [segue destinationViewController];
         viewController.managedObjectContext = self.managedObjectContext;
         viewController.link = link;
+
+        HTAssertSimulatorOnly(link, nil);
+    }
+    else if ([[segue identifier] isEqualToString:@"addNewLink"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DRLink *link = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        DRDetailViewController *viewController = [segue destinationViewController];
+        viewController.managedObjectContext = self.managedObjectContext;
+        viewController.link = link;
+
+        HTAssertSimulatorOnly(link, nil);
     }
 }
 

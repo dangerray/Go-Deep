@@ -63,6 +63,13 @@
     [self.titleTextField becomeFirstResponder];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    HTAssertSimulatorOnly(self.link, nil);
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];

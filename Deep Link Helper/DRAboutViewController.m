@@ -36,4 +36,21 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)getInTouchButtonPressed:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"mailto:us@dangerray.com"];
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+    {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    else
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Oops!"
+                                    message:@"Your iOS device can't send email."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+    }
+}
+
 @end
