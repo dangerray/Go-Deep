@@ -7,10 +7,15 @@
         <!--Navigation Controller-->
         <scene sceneID="cUi-kZ-frf">
             <objects>
-                <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EGG-5H-OSE">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
                     </connections>
@@ -63,6 +68,15 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="About" id="PlU-4H-ffk">
+                            <connections>
+                                <segue destination="Rox-EY-hqG" kind="modal" id="4Eq-kE-b0I"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OdD-wO-b9v"/>
+                        <barButtonItem title="Share" id="eam-I8-wUh"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Deep Links" id="tQt-TN-PWz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -72,30 +86,30 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DRDetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" hidesBottomBarWhenPushed="YES" id="Ah7-4n-0Wa" customClass="DRDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W5r-Vh-UdC"/>
                         <viewControllerLayoutGuide type="bottom" id="hBr-yu-l0k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSc-0i-NS3">
-                                <rect key="frame" x="20" y="83" width="37" height="21"/>
+                                <rect key="frame" x="20" y="127" width="37" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-LO-M2m">
-                                <rect key="frame" x="20" y="151" width="39" height="21"/>
+                                <rect key="frame" x="20" y="195" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lg-ld-vhi">
-                                <rect key="frame" x="20" y="108" width="280" height="30"/>
+                                <rect key="frame" x="20" y="152" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -103,8 +117,8 @@
                                     <outlet property="delegate" destination="Ah7-4n-0Wa" id="eCc-jh-Uz6"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-i4-pLK">
-                                <rect key="frame" x="20" y="177" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-i4-pLK" customClass="HTAutocompleteTextField">
+                                <rect key="frame" x="20" y="221" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -113,7 +127,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-YQ-Mbm">
-                                <rect key="frame" x="223" y="225" width="77" height="30"/>
+                                <rect key="frame" x="223" y="269" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete Link">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,7 +138,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T81-IM-MgF">
-                                <rect key="frame" x="20" y="225" width="71" height="30"/>
+                                <rect key="frame" x="20" y="269" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Link">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,7 +167,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Link" id="cra-N8-TIN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="titleTextField" destination="1Lg-ld-vhi" id="tBu-kT-OFy"/>
                         <outlet property="urlTextField" destination="6SO-i4-pLK" id="Fc6-PN-SYa"/>
@@ -162,6 +175,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="sSn-GF-icy">
+            <objects>
+                <viewController id="f62-3S-pOV" customClass="DRAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ZW-AF-d7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="KFs-UP-Iaz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13u-l0-DFa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Link Helper 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-Zr-l23">
+                                <rect key="frame" x="20" y="89" width="155" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Jonathan Sibley" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYH-h0-C4y">
+                                <rect key="frame" x="20" y="129" width="123" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2013 Dr. Jon's Danger Ray, Inc." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-UA-IkO">
+                                <rect key="frame" x="20" y="154" width="280" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="l0c-gT-HLZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pYH-h0-C4y" firstAttribute="top" secondItem="Vlf-Zr-l23" secondAttribute="bottom" constant="20" id="68U-FU-wuv"/>
+                            <constraint firstItem="WUx-UA-IkO" firstAttribute="top" secondItem="pYH-h0-C4y" secondAttribute="bottom" constant="8" id="CAb-wE-NF0"/>
+                            <constraint firstItem="Vlf-Zr-l23" firstAttribute="top" secondItem="2ZW-AF-d7N" secondAttribute="bottom" constant="25" id="Wof-Fh-yUU"/>
+                            <constraint firstItem="WUx-UA-IkO" firstAttribute="leading" secondItem="pYH-h0-C4y" secondAttribute="leading" id="ZMI-qU-LWT"/>
+                            <constraint firstItem="Vlf-Zr-l23" firstAttribute="leading" secondItem="pYH-h0-C4y" secondAttribute="leading" id="ner-NS-oxt"/>
+                            <constraint firstItem="Vlf-Zr-l23" firstAttribute="leading" secondItem="13u-l0-DFa" secondAttribute="leading" constant="20" id="uFe-Js-z6J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xhm-G6-mL1">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="qNv-yy-mF8">
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="f62-3S-pOV" id="r8J-JV-p6p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I69-Ig-PAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Epn-Cp-saq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rox-EY-hqG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jLd-oY-zIw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f62-3S-pOV" kind="relationship" relationship="rootViewController" id="zKi-xM-6QR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n3-JW-vU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="723"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
