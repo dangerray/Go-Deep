@@ -115,16 +115,16 @@
         NSURL *url = [NSURL URLWithString:self.urlTextField.text];
         if ([[UIApplication sharedApplication] canOpenURL:url])
         {
-            self.urlTextField.backgroundColor = [UIColor greenColor];
+            self.urlTextField.textColor = [UIColor blackColor];
         }
         else
         {
-            self.urlTextField.backgroundColor = [UIColor redColor];
+            self.urlTextField.textColor = [UIColor redColor];
         }
     }
     else
     {
-        self.urlTextField.backgroundColor = [UIColor whiteColor];
+        self.urlTextField.textColor = [UIColor blackColor];
     }
 }
 
