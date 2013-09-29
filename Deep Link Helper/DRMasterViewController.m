@@ -27,7 +27,7 @@
 
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed:)];
     self.navigationItem.rightBarButtonItem = addButton;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dr_applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -35,7 +35,7 @@
 
 #pragma mark - Actions
 
-- (void)insertNewObject:(id)sender
+- (void)addButtonPressed:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
@@ -63,7 +63,7 @@
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
                                     animated:NO
                               scrollPosition:UITableViewScrollPositionNone];
-        [self performSegueWithIdentifier:@"addNewLink" sender:self];
+        [self performSegueWithIdentifier:@"addNewLink" sender:newManagedObject];
     }
 }
 
@@ -87,7 +87,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+    NSInteger numberOfRows = [sectionInfo numberOfObjects];
+
+    if (!numberOfRows)
+    {
+        [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+
+        if ([self.tableView isEditing])
+        {
+            [self.tableView setEditing:NO animated:NO];
+        }
+    }
+    else
+    {
+        [self.navigationItem setLeftBarButtonItem:self.editButtonItem animated:YES];
+    }
+
+    return numberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -151,12 +167,12 @@
     }
     else if ([[segue identifier] isEqualToString:@"addNewLink"])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DRLink *link = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        DRLink *link = (DRLink *)sender;
         DRDetailViewController *viewController = [segue destinationViewController];
         viewController.managedObjectContext = self.managedObjectContext;
         viewController.link = link;
 
+        HTAssertSimulatorOnly([link isKindOfClass:[DRLink class]], nil);
         HTAssertSimulatorOnly(link, nil);
     }
 }
