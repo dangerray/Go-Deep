@@ -72,6 +72,7 @@
     if (![self.link.url length] && ![self.link.title length])
     {
         [self deleteLink];
+        [self save];
     }
     else
     {
