@@ -6,11 +6,15 @@
 //  Copyright (c) 2013 Dr. Jon's Danger Ray, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DRLink.h"
 
-@interface DRDetailViewController : UIViewController
+@interface DRDetailViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (nonatomic, strong) DRLink *link;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, weak) IBOutlet UITextField *titleTextField;
+@property (nonatomic, weak) IBOutlet UITextField *urlTextField;
+
+
 @end
