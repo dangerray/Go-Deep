@@ -60,7 +60,7 @@
 /* Begin PBXFileReference section */
 		3C960EACE78743968C58BB33 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		8DD107F317F7CB8E00C7603A /* Deep Link Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Link Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD107F317F7CB8E00C7603A /* Deep Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Link.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD107F617F7CB8E00C7603A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8DD107FA17F7CB8E00C7603A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -136,7 +136,7 @@
 		8DD107F417F7CB8E00C7603A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DD107F317F7CB8E00C7603A /* Deep Link Helper.app */,
+				8DD107F317F7CB8E00C7603A /* Deep Link.app */,
 				8DD1081C17F7CB8F00C7603A /* Deep Link HelperTests.xctest */,
 			);
 			name = Products;
@@ -238,7 +238,7 @@
 			);
 			name = "Deep Link Helper";
 			productName = "Deep Link Helper";
-			productReference = 8DD107F317F7CB8E00C7603A /* Deep Link Helper.app */;
+			productReference = 8DD107F317F7CB8E00C7603A /* Deep Link.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8DD1081B17F7CB8F00C7603A /* Deep Link HelperTests */ = {
@@ -524,7 +524,7 @@
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deep Link";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -545,7 +545,7 @@
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deep Link";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
