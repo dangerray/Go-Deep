@@ -205,12 +205,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copyright 2013 Dr. Jon's Danger Ray, Inc." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-UA-IkO">
-                                <rect key="frame" x="20" y="154" width="280" height="14"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2013 Dr. Jon's Danger Ray, Inc." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-UA-IkO">
+                                <rect key="frame" x="20" y="157" width="280" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="l0c-gT-HLZ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,9 +215,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to buy a copy of Deep Link Helper to run in the iOS simulator?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="brf-I0-Pfl">
                                 <rect key="frame" x="20" y="469" width="280" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="ij4-Sg-hBc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -241,6 +235,7 @@
                             <constraint firstItem="pYH-h0-C4y" firstAttribute="top" secondItem="Vlf-Zr-l23" secondAttribute="bottom" constant="20" id="68U-FU-wuv"/>
                             <constraint firstItem="WUx-UA-IkO" firstAttribute="top" secondItem="pYH-h0-C4y" secondAttribute="bottom" constant="8" id="CAb-wE-NF0"/>
                             <constraint firstItem="WvH-Wh-0li" firstAttribute="leading" secondItem="WUx-UA-IkO" secondAttribute="leading" id="E25-Ak-ZKg"/>
+                            <constraint firstAttribute="trailing" secondItem="brf-I0-Pfl" secondAttribute="trailing" constant="20" id="GqT-BG-OGv"/>
                             <constraint firstItem="KFs-UP-Iaz" firstAttribute="top" secondItem="WvH-Wh-0li" secondAttribute="bottom" constant="20" id="Ktd-MY-cDM"/>
                             <constraint firstItem="WvH-Wh-0li" firstAttribute="leading" secondItem="brf-I0-Pfl" secondAttribute="leading" id="SPh-pc-sS4"/>
                             <constraint firstItem="WvH-Wh-0li" firstAttribute="top" secondItem="brf-I0-Pfl" secondAttribute="bottom" constant="8" id="SfM-de-Guy"/>
@@ -248,6 +243,7 @@
                             <constraint firstItem="WUx-UA-IkO" firstAttribute="leading" secondItem="pYH-h0-C4y" secondAttribute="leading" id="ZMI-qU-LWT"/>
                             <constraint firstItem="Vlf-Zr-l23" firstAttribute="leading" secondItem="pYH-h0-C4y" secondAttribute="leading" id="ner-NS-oxt"/>
                             <constraint firstItem="Vlf-Zr-l23" firstAttribute="leading" secondItem="13u-l0-DFa" secondAttribute="leading" constant="20" id="uFe-Js-z6J"/>
+                            <constraint firstAttribute="trailing" secondItem="WUx-UA-IkO" secondAttribute="trailing" constant="20" id="uzr-vH-rpW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xhm-G6-mL1">
