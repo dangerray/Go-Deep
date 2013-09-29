@@ -1,1 +1,10 @@
+PODS:
+  - HTAutocompleteTextField (1.2.2)
+
+DEPENDENCIES:
+  - HTAutocompleteTextField
+
+SPEC CHECKSUMS:
+  HTAutocompleteTextField: 6b5f54f9aad0ac4ec119de5f4d7b8cf0e38c0c07
+
 COCOAPODS: 0.25.0
