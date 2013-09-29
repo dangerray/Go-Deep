@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		0FE6A841A5714E3990CFFCE2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C960EACE78743968C58BB33 /* libPods.a */; };
+		8DC4F92F17F80D8000B15CAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */; };
 		8DD107F717F7CB8E00C7603A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F617F7CB8E00C7603A /* Foundation.framework */; };
 		8DD107F917F7CB8E00C7603A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */; };
 		8DD107FB17F7CB8E00C7603A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107FA17F7CB8E00C7603A /* UIKit.framework */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3C960EACE78743968C58BB33 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8DD107F317F7CB8E00C7603A /* Deep Link Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Link Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD107F617F7CB8E00C7603A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +103,7 @@
 				8DD107FD17F7CB8E00C7603A /* CoreData.framework in Frameworks */,
 				8DD107FB17F7CB8E00C7603A /* UIKit.framework in Frameworks */,
 				8DD107F717F7CB8E00C7603A /* Foundation.framework in Frameworks */,
+				8DC4F92F17F80D8000B15CAE /* Crashlytics.framework in Frameworks */,
 				0FE6A841A5714E3990CFFCE2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +145,7 @@
 		8DD107F517F7CB8E00C7603A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */,
 				8DD107F617F7CB8E00C7603A /* Foundation.framework */,
 				8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */,
 				8DD107FA17F7CB8E00C7603A /* UIKit.framework */,
@@ -226,6 +230,7 @@
 				8DD107F017F7CB8E00C7603A /* Frameworks */,
 				8DD107F117F7CB8E00C7603A /* Resources */,
 				A804FF925B1746069E9ADA1A /* Copy Pods Resources */,
+				8DC4F92D17F80D4700B15CAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -325,6 +330,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		8DC4F92D17F80D4700B15CAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run f1c3c195dc844f23c69a79bc77f3b5195edcbdcd";
 		};
 		8DD1083817F7CC7C00C7603A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -497,6 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
@@ -511,6 +533,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";

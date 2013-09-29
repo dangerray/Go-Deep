@@ -10,6 +10,7 @@
 
 #import "DRMasterViewController.h"
 #import "iRate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation DRAppDelegate
 
@@ -29,6 +30,9 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     DRMasterViewController *controller = (DRMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+
+    [Crashlytics startWithAPIKey:@"f1c3c195dc844f23c69a79bc77f3b5195edcbdcd"];
+
     return YES;
 }
 							
