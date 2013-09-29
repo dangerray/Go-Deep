@@ -39,6 +39,8 @@
 		8DD1082117F7CB8F00C7603A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107FC17F7CB8E00C7603A /* CoreData.framework */; };
 		8DD1082917F7CB8F00C7603A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DD1082717F7CB8F00C7603A /* InfoPlist.strings */; };
 		8DD1082B17F7CB8F00C7603A /* Deep_Link_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1082A17F7CB8F00C7603A /* Deep_Link_HelperTests.m */; };
+		8DD1083E17F7CE4C00C7603A /* _DRLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1083B17F7CE4C00C7603A /* _DRLink.m */; };
+		8DD1083F17F7CE4C00C7603A /* DRLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1083D17F7CE4C00C7603A /* DRLink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		8DD1082617F7CB8F00C7603A /* Deep Link HelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deep Link HelperTests-Info.plist"; sourceTree = "<group>"; };
 		8DD1082817F7CB8F00C7603A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DD1082A17F7CB8F00C7603A /* Deep_Link_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deep_Link_HelperTests.m; sourceTree = "<group>"; };
+		8DD1083A17F7CE4C00C7603A /* _DRLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DRLink.h; sourceTree = "<group>"; };
+		8DD1083B17F7CE4C00C7603A /* _DRLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DRLink.m; sourceTree = "<group>"; };
+		8DD1083C17F7CE4C00C7603A /* DRLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRLink.h; sourceTree = "<group>"; };
+		8DD1083D17F7CE4C00C7603A /* DRLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRLink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		8DD107FE17F7CB8E00C7603A /* Deep Link Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8DD1083917F7CE4C00C7603A /* Model */,
 				8DD1080717F7CB8E00C7603A /* DRAppDelegate.h */,
 				8DD1080817F7CB8E00C7603A /* DRAppDelegate.m */,
 				8DD1080A17F7CB8E00C7603A /* Main.storyboard */,
@@ -178,6 +185,17 @@
 				8DD1082717F7CB8F00C7603A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8DD1083917F7CE4C00C7603A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DD1083A17F7CE4C00C7603A /* _DRLink.h */,
+				8DD1083B17F7CE4C00C7603A /* _DRLink.m */,
+				8DD1083C17F7CE4C00C7603A /* DRLink.h */,
+				8DD1083D17F7CE4C00C7603A /* DRLink.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD1081217F7CB8F00C7603A /* DRMasterViewController.m in Sources */,
+				8DD1083E17F7CE4C00C7603A /* _DRLink.m in Sources */,
 				8DD1081517F7CB8F00C7603A /* DRDetailViewController.m in Sources */,
 				8DD1080917F7CB8E00C7603A /* DRAppDelegate.m in Sources */,
+				8DD1083F17F7CE4C00C7603A /* DRLink.m in Sources */,
 				8DD1080F17F7CB8E00C7603A /* Deep_Link_Helper.xcdatamodeld in Sources */,
 				8DD1080517F7CB8E00C7603A /* main.m in Sources */,
 			);

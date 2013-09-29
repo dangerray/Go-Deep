@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
+    <entity name="DRLink" representedClassName="DRLink">
         <attribute name="timeStamp" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
@@ -9,6 +9,6 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DRLink" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
