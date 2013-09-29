@@ -16,14 +16,21 @@
 
 @implementation DRMasterViewController
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dr_applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)insertNewObject:(id)sender
@@ -55,6 +62,16 @@
                                     animated:NO
                               scrollPosition:UITableViewScrollPositionNone];
         [self performSegueWithIdentifier:@"showDetail" sender:self];
+    }
+}
+
+#pragma mark - Private
+
+- (void)dr_applicationDidBecomeActive:(NSNotification *)notification
+{
+    if ([self.tableView indexPathForSelectedRow])
+    {
+        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     }
 }
 
@@ -110,6 +127,12 @@
 {
     // The table view should not be re-orderable.
     return NO;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DRLink *link = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    [link openURL];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

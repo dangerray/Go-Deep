@@ -99,20 +99,7 @@
 
 - (IBAction)testLinkButtonPressed:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:self.link.url];
-
-    if ([[UIApplication sharedApplication] canOpenURL:url])
-    {
-        [[UIApplication sharedApplication] openURL:url];
-    }
-    else
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Oops!"
-                                    message:@"Your iOS device doesn't know how to handle that URL."
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
-    }
+    [self.link openURL];
 }
 
 
