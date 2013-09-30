@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_GVUserDefaults 9
 #define COCOAPODS_VERSION_PATCH_GVUserDefaults 1
 
+// Mixpanel
+#define COCOAPODS_POD_AVAILABLE_Mixpanel
+#define COCOAPODS_VERSION_MAJOR_Mixpanel 2
+#define COCOAPODS_VERSION_MINOR_Mixpanel 0
+#define COCOAPODS_VERSION_PATCH_Mixpanel 2
+
 // SDScreenshotCapture
 #define COCOAPODS_POD_AVAILABLE_SDScreenshotCapture
 #define COCOAPODS_VERSION_MAJOR_SDScreenshotCapture 1
