@@ -188,40 +188,40 @@
                         <viewControllerLayoutGuide type="top" id="2ZW-AF-d7N"/>
                         <viewControllerLayoutGuide type="bottom" id="KFs-UP-Iaz"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="bzi-kE-gzU">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="bzi-kE-gzU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Link Helper 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBL-ku-iuf">
-                                <rect key="frame" x="20" y="89" width="155" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Deep 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBL-ku-iuf">
+                                <rect key="frame" x="114" y="89" width="93" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Jonathan Sibley" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3q-uw-E67">
-                                <rect key="frame" x="20" y="117" width="139" height="20"/>
+                                <rect key="frame" x="91" y="117" width="139" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2013 Dr. Jon's Danger Ray, Inc." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="flh-97-Q5m">
-                                <rect key="frame" x="20" y="383" width="280" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2013 Dr. Jon's Danger Ray, Inc." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="279" translatesAutoresizingMaskIntoConstraints="NO" id="flh-97-Q5m">
+                                <rect key="frame" x="20" y="384" width="279" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to buy a copy of Deep Link Helper to run in the iOS simulator?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-j2-j9G">
-                                <rect key="frame" x="20" y="227" width="280" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to buy a copy of Go Deep to run in the iOS simulator?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-j2-j9G">
+                                <rect key="frame" x="23" y="227" width="276" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc6-tu-ejG">
-                                <rect key="frame" x="122" y="268" width="131" height="30"/>
+                                <rect key="frame" x="96" y="269" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="us@dangerray.com">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,32 +230,21 @@
                                     <action selector="getInTouchButtonPressed:" destination="f62-3S-pOV" eventType="touchUpInside" id="RF3-Qm-jzp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get in touch:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="94" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-dg-f2d">
-                                <rect key="frame" x="20" y="273" width="94" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IBL-ku-iuf" firstAttribute="leading" secondItem="bzi-kE-gzU" secondAttribute="leading" constant="20" symbolic="YES" id="00F-BF-fy6"/>
-                            <constraint firstItem="V6e-j2-j9G" firstAttribute="leading" secondItem="PRz-dg-f2d" secondAttribute="leading" id="1vF-NE-zvn"/>
-                            <constraint firstItem="KFs-UP-Iaz" firstAttribute="top" secondItem="flh-97-Q5m" secondAttribute="bottom" constant="165" id="2xw-oe-PEz"/>
-                            <constraint firstItem="V6e-j2-j9G" firstAttribute="leading" secondItem="S3q-uw-E67" secondAttribute="leading" id="Cl5-g5-eLh"/>
-                            <constraint firstItem="S3q-uw-E67" firstAttribute="top" secondItem="IBL-ku-iuf" secondAttribute="bottom" constant="8" symbolic="YES" id="Grr-rP-8sa"/>
-                            <constraint firstItem="PRz-dg-f2d" firstAttribute="leading" secondItem="flh-97-Q5m" secondAttribute="leading" id="GvG-dM-I7T"/>
-                            <constraint firstItem="flh-97-Q5m" firstAttribute="trailing" secondItem="V6e-j2-j9G" secondAttribute="trailing" id="HQw-LT-N8c"/>
-                            <constraint firstItem="V6e-j2-j9G" firstAttribute="centerX" secondItem="bzi-kE-gzU" secondAttribute="centerX" id="J4F-9D-F40"/>
-                            <constraint firstItem="PRz-dg-f2d" firstAttribute="top" secondItem="V6e-j2-j9G" secondAttribute="bottom" constant="5" id="P1S-ig-314"/>
-                            <constraint firstAttribute="trailing" secondItem="V6e-j2-j9G" secondAttribute="trailing" constant="20" symbolic="YES" id="R1b-mw-Hfu"/>
-                            <constraint firstItem="IBL-ku-iuf" firstAttribute="top" secondItem="2ZW-AF-d7N" secondAttribute="bottom" constant="25" id="XLJ-Tg-rBN"/>
-                            <constraint firstItem="sc6-tu-ejG" firstAttribute="leading" secondItem="PRz-dg-f2d" secondAttribute="trailing" constant="8" symbolic="YES" id="fN9-Uh-1Ow"/>
-                            <constraint firstItem="V6e-j2-j9G" firstAttribute="top" secondItem="S3q-uw-E67" secondAttribute="bottom" constant="90" id="mjN-rZ-JuG"/>
-                            <constraint firstItem="flh-97-Q5m" firstAttribute="top" secondItem="sc6-tu-ejG" secondAttribute="bottom" constant="85" id="qAM-Pw-lv8"/>
-                            <constraint firstItem="IBL-ku-iuf" firstAttribute="leading" secondItem="S3q-uw-E67" secondAttribute="leading" id="xxM-YV-HXg"/>
-                            <constraint firstItem="PRz-dg-f2d" firstAttribute="baseline" secondItem="sc6-tu-ejG" secondAttribute="baseline" id="zjD-lv-pyI"/>
+                            <constraint firstItem="IBL-ku-iuf" firstAttribute="top" secondItem="2ZW-AF-d7N" secondAttribute="bottom" constant="25" id="EBU-y0-XMA"/>
+                            <constraint firstItem="flh-97-Q5m" firstAttribute="leading" secondItem="bzi-kE-gzU" secondAttribute="leading" constant="20" id="Gns-cl-VnO"/>
+                            <constraint firstAttribute="centerX" secondItem="S3q-uw-E67" secondAttribute="centerX" constant="-0.5" id="K1Z-tW-MrH"/>
+                            <constraint firstItem="V6e-j2-j9G" firstAttribute="top" secondItem="S3q-uw-E67" secondAttribute="bottom" constant="90" id="QLn-Od-yjl"/>
+                            <constraint firstItem="S3q-uw-E67" firstAttribute="top" secondItem="IBL-ku-iuf" secondAttribute="bottom" constant="8" id="RlT-zA-rMB"/>
+                            <constraint firstAttribute="centerX" secondItem="IBL-ku-iuf" secondAttribute="centerX" constant="-0.5" id="UON-aW-I2K"/>
+                            <constraint firstItem="flh-97-Q5m" firstAttribute="top" secondItem="sc6-tu-ejG" secondAttribute="bottom" constant="85" id="Wjw-l4-V5v"/>
+                            <constraint firstAttribute="centerX" secondItem="flh-97-Q5m" secondAttribute="centerX" id="XBA-Qz-v67"/>
+                            <constraint firstAttribute="trailing" secondItem="flh-97-Q5m" secondAttribute="trailing" constant="20" id="g5Y-Ma-yfP"/>
+                            <constraint firstAttribute="centerX" secondItem="sc6-tu-ejG" secondAttribute="centerX" constant="-1.5" id="mG4-fb-dh1"/>
+                            <constraint firstAttribute="centerX" secondItem="V6e-j2-j9G" secondAttribute="centerX" constant="-0.5" id="qiN-H2-nEw"/>
+                            <constraint firstItem="sc6-tu-ejG" firstAttribute="top" secondItem="V6e-j2-j9G" secondAttribute="bottom" constant="1" id="tKQ-fY-9LV"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" id="Xhm-G6-mL1">
