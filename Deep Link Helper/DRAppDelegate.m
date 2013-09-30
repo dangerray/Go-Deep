@@ -39,7 +39,7 @@
 
     [Crashlytics startWithAPIKey:@"f1c3c195dc844f23c69a79bc77f3b5195edcbdcd"];
 
-    [Mixpanel sharedInstanceWithToken:@"c9f75669a4ef42f06ad6c1b1ce8ae826"];
+    [Mixpanel sharedInstanceWithToken:@"364ed16710a35f3d229ff89863c2ae46"];
     [[Mixpanel sharedInstance] track:@"app.launch" properties:nil];
 
     if (![GVUserDefaults standardUserDefaults].didLaunchOnce)

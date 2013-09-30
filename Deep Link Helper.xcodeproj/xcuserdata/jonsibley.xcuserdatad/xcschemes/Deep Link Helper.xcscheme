@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8DD107F217F7CB8E00C7603A"
-               BuildableName = "Deep Link Helper.app"
+               BuildableName = "Go Deep.app"
                BlueprintName = "Deep Link Helper"
                ReferencedContainer = "container:Deep Link Helper.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DD107F217F7CB8E00C7603A"
-            BuildableName = "Deep Link Helper.app"
+            BuildableName = "Go Deep.app"
             BlueprintName = "Deep Link Helper"
             ReferencedContainer = "container:Deep Link Helper.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DD107F217F7CB8E00C7603A"
-            BuildableName = "Deep Link Helper.app"
+            BuildableName = "Go Deep.app"
             BlueprintName = "Deep Link Helper"
             ReferencedContainer = "container:Deep Link Helper.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DD107F217F7CB8E00C7603A"
-            BuildableName = "Deep Link Helper.app"
+            BuildableName = "Go Deep.app"
             BlueprintName = "Deep Link Helper"
             ReferencedContainer = "container:Deep Link Helper.xcodeproj">
          </BuildableReference>
