@@ -11,5 +11,6 @@
 @interface GVUserDefaults (DRUserDefaults)
 
 @property (nonatomic, assign) BOOL didSeedDataOnce;
+@property (nonatomic, assign) BOOL didLaunchOnce;
 
 @end

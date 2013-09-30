@@ -97,11 +97,15 @@
 
 - (IBAction)deleteButtonPressed:(id)sender
 {
+    [[Mixpanel sharedInstance] track:@"app.detail.delete.pressed" properties:nil];
+
     [self deleteLink];
 }
 
 - (IBAction)testLinkButtonPressed:(id)sender
 {
+    [[Mixpanel sharedInstance] track:@"app.detail.open.pressed" properties:nil];
+
     [self.link openURL];
 }
 

@@ -39,6 +39,16 @@
 
     [Crashlytics startWithAPIKey:@"f1c3c195dc844f23c69a79bc77f3b5195edcbdcd"];
 
+    [Mixpanel sharedInstanceWithToken:@"c9f75669a4ef42f06ad6c1b1ce8ae826"];
+    [[Mixpanel sharedInstance] track:@"app.launch" properties:nil];
+
+    if (![GVUserDefaults standardUserDefaults].didLaunchOnce)
+    {
+        [[Mixpanel sharedInstance] track:@"app.launch.first" properties:nil];
+
+        [GVUserDefaults standardUserDefaults].didLaunchOnce = YES;
+    }
+
 #if DEBUG
 #if TARGET_IPHONE_SIMULATOR
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userWantsToTakeScreenshot:) name:DHCSHakeNotificationName object:nil];

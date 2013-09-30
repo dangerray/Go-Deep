@@ -66,7 +66,7 @@
 {
     DRLink *newLink = [self createAndInsertNewLink];
     newLink.timeStamp = [NSDate date];
-    
+
     // Save the context
     BOOL didSave = [self saveManagedObjectContextForFetchedResultsController];
     if (didSave)
@@ -76,6 +76,8 @@
                               scrollPosition:UITableViewScrollPositionNone];
         [self performSegueWithIdentifier:@"addNewLink" sender:newLink];
     }
+
+    [[Mixpanel sharedInstance] track:@"app.master.add.pressed" properties:nil];
 }
 
 #pragma mark - Public

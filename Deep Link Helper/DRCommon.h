@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GVUserDefaults+DRUserDefaults.h"
+#import "Mixpanel.h"
 
 @interface DRCommon : NSObject
 

@@ -11,5 +11,6 @@
 @implementation GVUserDefaults (DRUserDefaults)
 
 @dynamic didSeedDataOnce;
+@dynamic didLaunchOnce;
 
 @end
