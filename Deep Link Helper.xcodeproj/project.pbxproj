@@ -22,8 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		0FE6A841A5714E3990CFFCE2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C960EACE78743968C58BB33 /* libPods.a */; };
-		8DC4F92F17F80D8000B15CAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */; };
 		8DCE1C4917F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE1C4817F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m */; };
+		8DCE1C4B17F93E430028E595 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCE1C4A17F93E430028E595 /* Crashlytics.framework */; };
 		8DD107F717F7CB8E00C7603A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F617F7CB8E00C7603A /* Foundation.framework */; };
 		8DD107F917F7CB8E00C7603A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */; };
 		8DD107FB17F7CB8E00C7603A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107FA17F7CB8E00C7603A /* UIKit.framework */; };
@@ -60,9 +60,9 @@
 
 /* Begin PBXFileReference section */
 		3C960EACE78743968C58BB33 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8DCE1C4717F8FE180028E595 /* GVUserDefaults+DRUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+DRUserDefaults.h"; sourceTree = "<group>"; };
 		8DCE1C4817F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+DRUserDefaults.m"; sourceTree = "<group>"; };
+		8DCE1C4A17F93E430028E595 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8DD107F317F7CB8E00C7603A /* Go Deep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Deep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD107F617F7CB8E00C7603A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,7 +106,7 @@
 				8DD107FD17F7CB8E00C7603A /* CoreData.framework in Frameworks */,
 				8DD107FB17F7CB8E00C7603A /* UIKit.framework in Frameworks */,
 				8DD107F717F7CB8E00C7603A /* Foundation.framework in Frameworks */,
-				8DC4F92F17F80D8000B15CAE /* Crashlytics.framework in Frameworks */,
+				8DCE1C4B17F93E430028E595 /* Crashlytics.framework in Frameworks */,
 				0FE6A841A5714E3990CFFCE2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +148,7 @@
 		8DD107F517F7CB8E00C7603A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */,
+				8DCE1C4A17F93E430028E595 /* Crashlytics.framework */,
 				8DD107F617F7CB8E00C7603A /* Foundation.framework */,
 				8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */,
 				8DD107FA17F7CB8E00C7603A /* UIKit.framework */,
@@ -525,6 +525,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper/**",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
@@ -546,6 +547,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper/**",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
