@@ -530,7 +530,7 @@
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "Deep Link";
+				PRODUCT_NAME = "Go Deep";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -551,7 +551,7 @@
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
 				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "Deep Link";
+				PRODUCT_NAME = "Go Deep";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
