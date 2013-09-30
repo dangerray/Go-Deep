@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Dr. Jon's Danger Ray, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DRLink.h"
 
 #import <CoreData/CoreData.h>
 

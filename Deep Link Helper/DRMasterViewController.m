@@ -31,40 +31,64 @@
     self.navigationItem.rightBarButtonItem = addButton;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dr_applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+
+    if (![GVUserDefaults standardUserDefaults].didSeedDataOnce)
+    {
+        DRLink *webLink = [self createAndInsertNewLink];
+        webLink.title = @"DangerRay.com";
+        webLink.url = @"http://www.dangerray.com";
+
+        DRLink *emailLink = [self createAndInsertNewLink];
+        emailLink.title = @"Email Us";
+        emailLink.url = @"mailto:us@dangerray.com";
+
+        DRLink *twitterLink = [self createAndInsertNewLink];
+        twitterLink.title = @"Dr. Jon's Danger Ray on Twitter";
+        twitterLink.url = @"twitter://user?screen_name=DrJonsDangerRay";
+
+        DRLink *htLink = [self createAndInsertNewLink];
+        htLink.title = @"HotelTonight: San Francisco";
+        htLink.url = @"hoteltonight://market/1";
+
+        DRLink *callAppleStoreLink = [self createAndInsertNewLink];
+        callAppleStoreLink.title = @"Call Apple Store";
+        callAppleStoreLink.url = @"tel:+1-800-MY-APPLE";
+
+        [self saveManagedObjectContextForFetchedResultsController];
+
+        [GVUserDefaults standardUserDefaults].didSeedDataOnce = YES;
+    }
 }
 
 #pragma mark - Actions
 
 - (void)addButtonPressed:(id)sender
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    DRLink *newLink = [self createAndInsertNewLink];
+    newLink.timeStamp = [NSDate date];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error])
-    {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                        message:@"For some reason we're having trouble creating a new link!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-    else
+    // Save the context
+    BOOL didSave = [self saveManagedObjectContextForFetchedResultsController];
+    if (didSave)
     {
         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
                                     animated:NO
                               scrollPosition:UITableViewScrollPositionNone];
-        [self performSegueWithIdentifier:@"addNewLink" sender:newManagedObject];
+        [self performSegueWithIdentifier:@"addNewLink" sender:newLink];
     }
+}
+
+#pragma mark - Public
+
+- (DRLink *)createAndInsertNewLink
+{
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    DRLink *link = (DRLink *)[NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+
+    HTAssertSimulatorOnly([link isKindOfClass:[DRLink class]], nil);
+
+    return link;
 }
 
 #pragma mark - Private
@@ -75,6 +99,24 @@
     {
         [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     }
+}
+
+- (BOOL)saveManagedObjectContextForFetchedResultsController
+{
+    NSError *error = nil;
+    BOOL didSave = [[self.fetchedResultsController managedObjectContext] save:&error];
+    if (!didSave)
+    {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                        message:@"For some reason we're having trouble creating a new link!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    return didSave;
 }
 
 #pragma mark - Table View

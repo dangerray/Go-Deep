@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GVUserDefaults+DRUserDefaults.h"
 
 @interface DRCommon : NSObject
 

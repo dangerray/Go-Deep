@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_DHCShakeNotifier 2
 #define COCOAPODS_VERSION_PATCH_DHCShakeNotifier 0
 
+// GVUserDefaults
+#define COCOAPODS_POD_AVAILABLE_GVUserDefaults
+#define COCOAPODS_VERSION_MAJOR_GVUserDefaults 0
+#define COCOAPODS_VERSION_MINOR_GVUserDefaults 9
+#define COCOAPODS_VERSION_PATCH_GVUserDefaults 1
+
 // SDScreenshotCapture
 #define COCOAPODS_POD_AVAILABLE_SDScreenshotCapture
 #define COCOAPODS_VERSION_MAJOR_SDScreenshotCapture 1

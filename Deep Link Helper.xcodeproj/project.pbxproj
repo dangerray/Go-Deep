@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		0FE6A841A5714E3990CFFCE2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C960EACE78743968C58BB33 /* libPods.a */; };
 		8DC4F92F17F80D8000B15CAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */; };
+		8DCE1C4917F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE1C4817F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m */; };
 		8DD107F717F7CB8E00C7603A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F617F7CB8E00C7603A /* Foundation.framework */; };
 		8DD107F917F7CB8E00C7603A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */; };
 		8DD107FB17F7CB8E00C7603A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD107FA17F7CB8E00C7603A /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* Begin PBXFileReference section */
 		3C960EACE78743968C58BB33 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC4F92E17F80D8000B15CAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8DCE1C4717F8FE180028E595 /* GVUserDefaults+DRUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+DRUserDefaults.h"; sourceTree = "<group>"; };
+		8DCE1C4817F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+DRUserDefaults.m"; sourceTree = "<group>"; };
 		8DD107F317F7CB8E00C7603A /* Deep Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deep Link.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD107F617F7CB8E00C7603A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +172,8 @@
 				8DD1081417F7CB8F00C7603A /* DRDetailViewController.m */,
 				8DD1084317F7E76700C7603A /* DRAboutViewController.h */,
 				8DD1084417F7E76700C7603A /* DRAboutViewController.m */,
+				8DCE1C4717F8FE180028E595 /* GVUserDefaults+DRUserDefaults.h */,
+				8DCE1C4817F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m */,
 				8DD1081617F7CB8F00C7603A /* Images.xcassets */,
 				8DD1080D17F7CB8E00C7603A /* Deep_Link_Helper.xcdatamodeld */,
 				8DD107FF17F7CB8E00C7603A /* Supporting Files */,
@@ -385,6 +390,7 @@
 				8DD1084517F7E76700C7603A /* DRAboutViewController.m in Sources */,
 				8DD1081517F7CB8F00C7603A /* DRDetailViewController.m in Sources */,
 				8DD1080917F7CB8E00C7603A /* DRAppDelegate.m in Sources */,
+				8DCE1C4917F8FE180028E595 /* GVUserDefaults+DRUserDefaults.m in Sources */,
 				8DD1083F17F7CE4C00C7603A /* DRLink.m in Sources */,
 				8DD1080F17F7CB8E00C7603A /* Deep_Link_Helper.xcdatamodeld in Sources */,
 				8DD1080517F7CB8E00C7603A /* main.m in Sources */,
