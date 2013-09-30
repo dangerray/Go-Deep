@@ -1,7 +1,7 @@
 PODS:
   - DHCShakeNotifier (0.2.0)
   - GVUserDefaults (0.9.1)
-  - iRate (1.7.5)
+  - iRate (1.8)
   - Mixpanel (2.0.2)
   - SDScreenshotCapture (1.1)
 
@@ -15,7 +15,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   DHCShakeNotifier: 5f3f5327bcc86eda75524038a3f9426797e61a90
   GVUserDefaults: 5c24ace2008cc11953ebf72b6f9061ab898558d0
-  iRate: 8de5eaeca627c7708c8aec279eeb8daf2551c774
+  iRate: f36d1572a2d1f78cc30300e123845f7273bd9f29
   Mixpanel: 7829ba2cc58d251a4674520109e9bfead76acc98
   SDScreenshotCapture: 84bde211ba3ffa4656c4093f9ee2a762bb4c121f
 

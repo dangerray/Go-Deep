@@ -1,7 +1,7 @@
 //
 //  iRate.h
 //
-//  Version 1.7.4
+//  Version 1.8
 //
 //  Created by Nick Lockwood on 26/01/2011.
 //  Copyright 2011 Charcoal Design
@@ -34,18 +34,22 @@
 #import <Availability.h>
 #undef weak_delegate
 #if __has_feature(objc_arc_weak) && \
-(!(defined __MAC_OS_X_VERSION_MIN_REQUIRED) || \
-__MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8)
+(TARGET_OS_IPHONE || __MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8)
 #define weak_delegate weak
 #else
 #define weak_delegate unsafe_unretained
 #endif
 
 
-#ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #else
 #import <Cocoa/Cocoa.h>
+#endif
+
+
+#if IRATE_USE_STOREKIT
+#import <StoreKit/StoreKit.h>
 #endif
 
 
@@ -119,11 +123,9 @@ iRateErrorCode;
 
 //debugging and prompt overrides
 @property (nonatomic, assign) BOOL useAllAvailableLanguages;
-@property (nonatomic, assign) BOOL disableAlertViewResizing;
 @property (nonatomic, assign) BOOL promptAgainForEachNewVersion;
 @property (nonatomic, assign) BOOL onlyPromptIfLatestVersion;
 @property (nonatomic, assign) BOOL onlyPromptIfMainWindowIsAvailable;
-@property (nonatomic, assign) BOOL displayAppUsingStorekitIfAvailable;
 @property (nonatomic, assign) BOOL promptAtLaunch;
 @property (nonatomic, assign) BOOL verboseLogging;
 @property (nonatomic, assign) BOOL previewMode;
@@ -145,7 +147,7 @@ iRateErrorCode;
 - (BOOL)shouldPromptForRating;
 - (void)promptForRating;
 - (void)promptIfNetworkAvailable;
-- (void)openRatingsPageInAppStore;
+- (BOOL)openRatingsPageInAppStore;
 - (void)logEvent:(BOOL)deferPrompt;
 
 @end
