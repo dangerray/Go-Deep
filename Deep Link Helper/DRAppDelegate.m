@@ -104,10 +104,12 @@
 
 #pragma mark - Private
 
+#if DEBUG
 - (void)userWantsToTakeScreenshot:(NSNotification *)notification
 {
     [SDScreenshotCapture takeScreenshotToActivityViewController];
 }
+#endif
 
 #pragma mark - Core Data stack
 
