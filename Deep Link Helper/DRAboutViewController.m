@@ -25,7 +25,7 @@
 
 - (IBAction)shareButtonPressed:(id)sender
 {
-    NSString *shareText = NSLocalizedString(@"Check out Deep Link Helper, an app to help you test deep links: https://itunes.apple.com/us/app/deep-link-helper-open-any/id717821942?ls=1&mt=8", nil);
+    NSString *shareText = NSLocalizedString(@"Check out Deep Link Helper, an app to help you test deep links: https://itunes.apple.com/us/app/go-deep-open-any-native-url/id717821942?ls=1&mt=8", nil);
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[ shareText ] applicationActivities:nil];
     [self.navigationController presentViewController:controller animated:YES completion:nil];
 
