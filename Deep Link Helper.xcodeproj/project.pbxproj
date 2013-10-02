@@ -52,10 +52,10 @@
 		8DD107F817F7CB8E00C7603A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8DD107FA17F7CB8E00C7603A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8DD107FC17F7CB8E00C7603A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		8DD1080017F7CB8E00C7603A /* Go Deep-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Go Deep-Info.plist"; sourceTree = "<group>"; };
+		8DD1080017F7CB8E00C7603A /* Deep Link Helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Deep Link Helper-Info.plist"; sourceTree = "<group>"; };
 		8DD1080217F7CB8E00C7603A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DD1080417F7CB8E00C7603A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8DD1080617F7CB8E00C7603A /* Go Deep-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Go Deep-Prefix.pch"; sourceTree = "<group>"; };
+		8DD1080617F7CB8E00C7603A /* Deep Link Helper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deep Link Helper-Prefix.pch"; sourceTree = "<group>"; };
 		8DD1080717F7CB8E00C7603A /* DRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRAppDelegate.h; sourceTree = "<group>"; };
 		8DD1080817F7CB8E00C7603A /* DRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRAppDelegate.m; sourceTree = "<group>"; };
 		8DD1080B17F7CB8E00C7603A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,10 +153,10 @@
 		8DD107FF17F7CB8E00C7603A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DD1080017F7CB8E00C7603A /* Go Deep-Info.plist */,
+				8DD1080017F7CB8E00C7603A /* Deep Link Helper-Info.plist */,
 				8DD1080117F7CB8E00C7603A /* InfoPlist.strings */,
 				8DD1080417F7CB8E00C7603A /* main.m */,
-				8DD1080617F7CB8E00C7603A /* Go Deep-Prefix.pch */,
+				8DD1080617F7CB8E00C7603A /* Deep Link Helper-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8DD107F217F7CB8E00C7603A /* godeep */ = {
+		8DD107F217F7CB8E00C7603A /* Deep Link Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "godeep" */;
+			buildConfigurationList = 8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "Deep Link Helper" */;
 			buildPhases = (
 				0FF3820A7B1B469FA4A40601 /* Check Pods Manifest.lock */,
 				8DD107EF17F7CB8E00C7603A /* Sources */,
@@ -190,7 +190,7 @@
 			);
 			dependencies = (
 			);
-			name = godeep;
+			name = "Deep Link Helper";
 			productName = "Deep Link Helper";
 			productReference = 8DD107F317F7CB8E00C7603A /* Go Deep.app */;
 			productType = "com.apple.product-type.application";
@@ -205,7 +205,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dr. Jon's Danger Ray, Inc.";
 			};
-			buildConfigurationList = 8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Go Deep" */;
+			buildConfigurationList = 8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Deep Link Helper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,7 +218,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DD107F217F7CB8E00C7603A /* godeep */,
+				8DD107F217F7CB8E00C7603A /* Deep Link Helper */,
 				8DD1083417F7CC4D00C7603A /* mogenerator */,
 			);
 		};
@@ -418,8 +418,8 @@
 					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Deep Link Helper/Go Deep-Prefix.pch";
-				INFOPLIST_FILE = "Deep Link Helper/Go Deep-Info.plist";
+				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
+				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Go Deep";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,8 +439,8 @@
 					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Deep Link Helper/Go Deep-Prefix.pch";
-				INFOPLIST_FILE = "Deep Link Helper/Go Deep-Info.plist";
+				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
+				INFOPLIST_FILE = "Deep Link Helper/Deep Link Helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Go Deep";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Go Deep" */ = {
+		8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Deep Link Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DD1082C17F7CB8F00C7603A /* Debug */,
@@ -474,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "godeep" */ = {
+		8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "Deep Link Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DD1082F17F7CB8F00C7603A /* Debug */,
