@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>11B1FEAA-B485-49B4-9E61-BC07DE923A73</string>
+	<string>5F27F4F7-8B3F-4C0D-BB00-9DFE9BBDADF9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Deep Link Helper</string>
+	<string>GoDeep</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BA792850-8C6B-4609-BB8F-402916DC4020</key>
 		<string>https://github.com/dangerray/Go-Deep.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Deep Link Helper.xcworkspace</string>
+	<string>GoDeep.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BA792850-8C6B-4609-BB8F-402916DC4020</key>

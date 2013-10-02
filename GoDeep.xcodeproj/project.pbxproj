@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8DD107F217F7CB8E00C7603A /* Deep Link Helper */ = {
+		8DD107F217F7CB8E00C7603A /* GoDeep */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "Deep Link Helper" */;
+			buildConfigurationList = 8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "GoDeep" */;
 			buildPhases = (
 				0FF3820A7B1B469FA4A40601 /* Check Pods Manifest.lock */,
 				8DD107EF17F7CB8E00C7603A /* Sources */,
@@ -190,7 +190,7 @@
 			);
 			dependencies = (
 			);
-			name = "Deep Link Helper";
+			name = GoDeep;
 			productName = "Deep Link Helper";
 			productReference = 8DD107F317F7CB8E00C7603A /* Go Deep.app */;
 			productType = "com.apple.product-type.application";
@@ -204,8 +204,13 @@
 				CLASSPREFIX = DR;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dr. Jon's Danger Ray, Inc.";
+				TargetAttributes = {
+					8DD107F217F7CB8E00C7603A = {
+						DevelopmentTeam = UUYVX95FNX;
+					};
+				};
 			};
-			buildConfigurationList = 8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Deep Link Helper" */;
+			buildConfigurationList = 8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "GoDeep" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,7 +223,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DD107F217F7CB8E00C7603A /* Deep Link Helper */,
+				8DD107F217F7CB8E00C7603A /* GoDeep */,
 				8DD1083417F7CC4D00C7603A /* mogenerator */,
 			);
 		};
@@ -412,10 +417,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper/**",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
@@ -433,10 +438,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Deep\\ Link\\ Helper/**",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep",
+					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
@@ -465,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "Deep Link Helper" */ = {
+		8DD107EE17F7CB8E00C7603A /* Build configuration list for PBXProject "GoDeep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DD1082C17F7CB8F00C7603A /* Debug */,
@@ -474,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "Deep Link Helper" */ = {
+		8DD1082E17F7CB8F00C7603A /* Build configuration list for PBXNativeTarget "GoDeep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DD1082F17F7CB8F00C7603A /* Debug */,

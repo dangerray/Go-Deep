@@ -27,7 +27,7 @@
 // SDScreenshotCapture
 #define COCOAPODS_POD_AVAILABLE_SDScreenshotCapture
 #define COCOAPODS_VERSION_MAJOR_SDScreenshotCapture 1
-#define COCOAPODS_VERSION_MINOR_SDScreenshotCapture 1
+#define COCOAPODS_VERSION_MINOR_SDScreenshotCapture 2
 #define COCOAPODS_VERSION_PATCH_SDScreenshotCapture 0
 
 // iRate
