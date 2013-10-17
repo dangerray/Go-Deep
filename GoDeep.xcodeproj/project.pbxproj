@@ -420,7 +420,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep/**",
+					"./**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
@@ -441,7 +441,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jonsibley/Dropbox/iOS_Projects/Go\\ Deep/**",
+					"./**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Deep Link Helper/Deep Link Helper-Prefix.pch";
