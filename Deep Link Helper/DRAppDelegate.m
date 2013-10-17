@@ -10,7 +10,6 @@
 
 #import "DRMasterViewController.h"
 #import <iRate/iRate.h>
-#import <Crashlytics/Crashlytics.h>
 
 #if DEBUG
 #import <SDScreenshotCapture/SDScreenshotCapture.h>
@@ -36,8 +35,6 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     DRMasterViewController *controller = (DRMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
-
-    [Crashlytics startWithAPIKey:@"f1c3c195dc844f23c69a79bc77f3b5195edcbdcd"];
 
     [Mixpanel sharedInstanceWithToken:@"364ed16710a35f3d229ff89863c2ae46"];
     [[Mixpanel sharedInstance] track:@"app.launch" properties:nil];
