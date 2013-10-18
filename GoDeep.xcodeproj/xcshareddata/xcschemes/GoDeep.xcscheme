@@ -105,7 +105,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Log STDOUT to a file&#10;exec &gt; ~/post_build_log.txt 2&gt;&amp;1&#10;&#10;if [ ${USER}=&quot;ios&quot; ]; then&#10;&#10;    original_directory=`pwd`&#10;&#10;    echo $WORKSPACE_PATH&#10;&#10;    cd $WORKSPACE_PATH&#10;&#10;    sh ../scripts/Xcode4HockeyAppTestFlightintegration.sh&#10;&#10;    cd $original_directory&#10;&#10;fi">
+               scriptText = "# Log STDOUT to a file for debugging&#10;exec &gt; ~/post_build_log.txt 2&gt;&amp;1&#10;&#10;# Get project directory&#10;# $WORKSPACE_PATH is /.../XXX.xcworkspace&#10;# so we strip off /XXX.xcworkspace with sed&#10;project_dir=`echo &quot;$WORKSPACE_PATH&quot; | sed -e &quot;s/\/[^\/]*$//&quot;`&#10;&#10;# Run our pre-actions script&#10;ruby &quot;$project_dir/scripts/GoDeep-post-actions.rb&quot;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
