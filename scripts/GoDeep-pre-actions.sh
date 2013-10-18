@@ -1,6 +1,3 @@
-# Log STDOUT to a file
-# exec > ~/pre_build_log-GoDeep-pre-actions.txt 2>&1
-
 # Get project directory
 # $WORKSPACE_PATH is /.../XXX.xcworkspace
 # so we strip off /XXX.xcworkspace with sed
