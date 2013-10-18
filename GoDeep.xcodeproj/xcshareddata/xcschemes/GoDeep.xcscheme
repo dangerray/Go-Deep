@@ -87,7 +87,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Log STDOUT to a file&#10;exec &gt; ~/pre_build_log.txt 2&gt;&amp;1&#10;&#10;# Get project directory&#10;# $WORKSPACE_PATH is /.../XXX.xcworkspace&#10;# so we strip off /XXX.xcworkspace with sed&#10;project_dir=`echo &quot;$WORKSPACE_PATH&quot; | sed -e &quot;s/\/[^\/]*$//&quot;`&#10;&#10;# Run our pre-actions script&#10;sh &quot;$project_dir/scripts/GoDeep-pre-actions.sh&quot;">
+               scriptText = "# Log STDOUT to a file for debugging&#10;#exec &gt; ~/pre_build_log.txt 2&gt;&amp;1&#10;&#10;# Get project directory&#10;# $WORKSPACE_PATH is /.../XXX.xcworkspace&#10;# so we strip off /XXX.xcworkspace with sed&#10;project_dir=`echo &quot;$WORKSPACE_PATH&quot; | sed -e &quot;s/\/[^\/]*$//&quot;`&#10;&#10;# Run our pre-actions script&#10;sh &quot;$project_dir/scripts/GoDeep-pre-actions.sh&quot;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
