@@ -6,5 +6,5 @@ project_dir = p.dirname.to_s
 
 # Check for user "ios" to know if this is being run on our Xcode CI environment
 if ENV['USER'] == "ios"
-    `sh #{project_dir}/scripts/Xcode4HockeyAppTestFlightintegration.sh`
+    `ruby #{project_dir}/scripts/setCommitHashAsBundleVersion.rb`
 end
