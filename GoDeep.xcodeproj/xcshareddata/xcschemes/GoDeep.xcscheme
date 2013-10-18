@@ -96,7 +96,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "if ${USER}=&quot;iOS&quot;&#10;&#10;# Log output to a file&#10;exec &gt; ~/my_log_file2.txt 2&gt;&amp;1&#10;&#10;original_directory=`pwd`&#10;&#10;echo $WORKSPACE_PATH&#10;&#10;cd $WORKSPACE_PATH&#10;&#10;sh ../scripts/Xcode4HockeyAppTestFlightintegration.sh&#10;&#10;cd $original_directory&#10;fi">
+               scriptText = "# Log output to a file&#10;exec &gt; ~/my_log_file2.txt 2&gt;&amp;1&#10;&#10;echo ${USER}&#10;&#10;if [ ${USER}=&quot;iOS&quot; ]&#10;&#10;original_directory=`pwd`&#10;&#10;echo $WORKSPACE_PATH&#10;&#10;cd $WORKSPACE_PATH&#10;&#10;sh ../scripts/Xcode4HockeyAppTestFlightintegration.sh&#10;&#10;cd $original_directory&#10;fi">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
