@@ -82,5 +82,14 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Log output to a file&#10;exec &gt; ~/my_log_file2.txt 2&gt;&amp;1&#10;&#10;original_directory=`pwd`&#10;&#10;echo $WORKSPACE_PATH&#10;&#10;cd $WORKSPACE_PATH&#10;&#10;ruby ../scripts/setCommitHashAsBundleVersion.rb &#10;&#10;cd $original_directory">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
    </ArchiveAction>
 </Scheme>
