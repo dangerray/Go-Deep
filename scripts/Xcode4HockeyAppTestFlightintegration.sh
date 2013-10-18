@@ -50,7 +50,7 @@ SKIP_RESIGNING_AND_REPROVISIONING="YES"
 #
 # Uncomment this line to skip the Release Notes input step and to set a default value:
 #
-DEFAULT_RELEASE_NOTES="Just another test version."
+DEFAULT_RELEASE_NOTES=" "
 #
 # Uncomment this line to skip the Distribution Lists input step and to use the default value:
 #
@@ -66,8 +66,13 @@ SHOW_DEBUG_CONSOLE="YES"
 #
 # Uncomment this line to disable opening the browser with the TestFlight dashboard at the end of the ride
 #
-#DISABLE_OPEN_DASHBOARD="YES"
+DISABLE_OPEN_DASHBOARD="YES"
 #
+# Set to YES to always upload automatically, set to NO to prompt the user first
+AUTO_UPLOAD="YES"
+#
+# Use this to disable all dialogs 
+DISABLE_DIALOGS="YES"
 # =====================================================================================================================
 
 # Setup logging stuff...
@@ -90,7 +95,9 @@ echo "PRODUCT_NAME: $PRODUCT_NAME" >> $LOG
 
 # Do some existence checks for the build settings that this script depends on:
 if [ "$CODE_SIGN_IDENTITY" = "" -o "$WRAPPER_NAME" = "" -o "$ARCHIVE_DSYMS_PATH" = "" -o "$ARCHIVE_PRODUCTS_PATH" = "" -o "$DWARF_DSYM_FILE_NAME" = "" -o "$INSTALL_PATH" = "" ]; then
-    osascript -e "tell application \"Xcode\"" -e "display dialog \"It looks like we're missing build settings.\n\nYou can fix this by editing your scheme's Run Script action and selecting the appropriate target from the 'Provide build settings from...' drop down menu.\" buttons {\"OK\"} default button \"OK\" with icon stop" -e "end tell"
+    if [ "$DISABLE_DIALOGS" != "YES" ]; then
+        osascript -e "tell application \"Xcode\"" -e "display dialog \"It looks like we're missing build settings.\n\nYou can fix this by editing your scheme's Run Script action and selecting the appropriate target from the 'Provide build settings from...' drop down menu.\" buttons {\"OK\"} default button \"OK\" with icon stop" -e "end tell"
+    fi
     exit 1
 fi
 
@@ -98,8 +105,12 @@ fi
 DSYM_PATH="$ARCHIVE_DSYMS_PATH"
 APP="$ARCHIVE_PRODUCTS_PATH/$INSTALL_PATH/$WRAPPER_NAME"
 
-# Ask if we need to proceed to upload to TestFlight using an AppleScript dialog in Xcode:
-SHOULD_UPLOAD=`osascript -e "tell application \"Xcode\"" -e "set noButton to \"No, Thanks\"" -e "set yesButton to \"Yes!\"" -e "set upload_dialog to display dialog \"Do you want to upload this build to $UPLOAD_SERVICE?\" buttons {noButton, yesButton} default button yesButton with icon 1" -e "set button to button returned of upload_dialog" -e "if button is equal to yesButton then" -e "return 1" -e "else" -e "return 0" -e "end if" -e "end tell"`
+if [ "$AUTO_UPLOAD" != "YES" ]; then
+    # Ask if we need to proceed to upload to TestFlight using an AppleScript dialog in Xcode:
+    SHOULD_UPLOAD=`osascript -e "tell application \"Xcode\"" -e "set noButton to \"No, Thanks\"" -e "set yesButton to \"Yes!\"" -e "set upload_dialog to display dialog \"Do you want to upload this build to $UPLOAD_SERVICE?\" buttons {noButton, yesButton} default button yesButton with icon 1" -e "set button to button returned of upload_dialog" -e "if button is equal to yesButton then" -e "return 1" -e "else" -e "return 0" -e "end if" -e "end tell"`
+else
+    SHOULD_UPLOAD="YES"
+fi
 
 # Exit this script if the user indicated we shouldn't upload:
 if [ "$SHOULD_UPLOAD" = "0" ]; then
@@ -199,7 +210,9 @@ fi #SKIP_RESIGNING_AND_REPROVISIONING
 # Now onto the Release Notes...
 if [ "$DEFAULT_RELEASE_NOTES" = "" ]; then
     # Bring up an AppleScript dialog in Xcode to enter the Release Notes for this (beta) build:
-    NOTES=`osascript -e "tell application \"Xcode\"" -e "set notes_dialog to display dialog \"Please provide some release notes:\nHint: use Ctrl-J for New Line.\" default answer \"\" buttons {\"Next\"} default button \"Next\" with icon 1" -e "set notes to text returned of notes_dialog" -e "end tell" -e "return notes"`
+    if [ "$DISABLE_DIALOGS" != "YES" ]; then
+        NOTES=`osascript -e "tell application \"Xcode\"" -e "set notes_dialog to display dialog \"Please provide some release notes:\nHint: use Ctrl-J for New Line.\" default answer \"\" buttons {\"Next\"} default button \"Next\" with icon 1" -e "set notes to text returned of notes_dialog" -e "end tell" -e "return notes"`
+    fi
 else
     NOTES="$DEFAULT_RELEASE_NOTES"
 fi #DEFAULT_RELEASE_NOTES
@@ -238,7 +251,9 @@ if [ "$SKIP_NOTIFY" != "YES" ]; then
     else
         SELECTED_NOTIFY_BUTTON="No, Thanks"
     fi
-    SHOULD_NOTIFY=`osascript -e "tell application \"Xcode\"" -e "set noButton to \"No, Thanks\"" -e "set yesButton to \"Yes, Please!\"" -e "set upload_dialog to display dialog \"Do you want to have your team members notified by TestFlight about this new version?\" buttons {noButton, yesButton} default button yesButton with icon 1" -e "set button to button returned of upload_dialog" -e "if button is equal to yesButton then" -e "return \"True\"" -e "else" -e "return \"False\"" -e "end if" -e "end tell"`
+    if [ "$DISABLE_DIALOGS" != "YES" ]; then
+        SHOULD_NOTIFY=`osascript -e "tell application \"Xcode\"" -e "set noButton to \"No, Thanks\"" -e "set yesButton to \"Yes, Please!\"" -e "set upload_dialog to display dialog \"Do you want to have your team members notified by TestFlight about this new version?\" buttons {noButton, yesButton} default button yesButton with icon 1" -e "set button to button returned of upload_dialog" -e "if button is equal to yesButton then" -e "return \"True\"" -e "else" -e "return \"False\"" -e "end if" -e "end tell"`
+    fi
 else
     SHOULD_NOTIFY="$DEFAULT_NOTIFY_VALUE"
 fi
@@ -258,7 +273,9 @@ fi #SKIP_RESIGNING_AND_REPROVISIONING
 
 if [ "$?" -ne 0 ]; then
     echo "There were errors creating IPA." >> $LOG
-    osascript -e "tell application \"Xcode\"" -e "display dialog \"There were errors creating IPA... Check $LOG\" buttons {\"OK\"} with icon stop" -e "end tell"
+    if [ "$DISABLE_DIALOGS" != "YES" ]; then
+        osascript -e "tell application \"Xcode\"" -e "display dialog \"There were errors creating IPA... Check $LOG\" buttons {\"OK\"} with icon stop" -e "end tell"
+    fi
     /usr/bin/open -a /Applications/Utilities/Console.app $LOG
     exit 1
 fi 
@@ -302,14 +319,18 @@ fi
 popd
 if [ "$?" -ne 0 ]; then
     echo "There were errors uploading." >> $LOG
-    osascript -e "tell application \"Xcode\"" -e "display dialog \"There were errors uploading... Check $LOG\" buttons {\"OK\"} with icon stop" -e "end tell"
+    if [ "$DISABLE_DIALOGS" != "YES" ]; then
+        osascript -e "tell application \"Xcode\"" -e "display dialog \"There were errors uploading... Check $LOG\" buttons {\"OK\"} with icon stop" -e "end tell"
+    fi
     /usr/bin/open -a /Applications/Utilities/Console.app $LOG
     exit 1
 fi
 
 echo >> $LOG
 echo "Uploaded to TestFlight!" >> $LOG
-osascript -e "tell application \"Xcode\"" -e "display dialog \"Upload to $UPLOAD_SERVICE done!\" buttons {\"OK\"} default button \"OK\"" -e "end tell"
+if [ "$DISABLE_DIALOGS" != "YES" ]; then
+    osascript -e "tell application \"Xcode\"" -e "display dialog \"Upload to $UPLOAD_SERVICE done!\" buttons {\"OK\"} default button \"OK\"" -e "end tell"
+fi
 
 if [ "$DISABLE_OPEN_DASHBOARD" != "YES" ]; then
     echo >> $LOG
