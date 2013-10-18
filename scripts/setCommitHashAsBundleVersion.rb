@@ -13,7 +13,7 @@
 # based on the Subversion script by Axel Andersson
 
 # Exit early if we're not running in the continuous integration environment
-if ENV["USER"] != "iOS"
+if ENV["USER"] != "ios"
   exit
 end
 
@@ -25,11 +25,9 @@ info_file_path = "../Deep\\ Link\\ Helper/Deep\\ Link\\ Helper-Info.plist"
 #  	git_details[1] is the number of commits since the most recent tag
 #  	git_details[2] is the partial hash of the most recent commit
 git_details = `/usr/bin/env git describe --long`.chomp.split("-")
-version_suffix = " (b#{git_details[1]} #{git_details[2]})"
-
-# Get the current value of CFBundleShortVersionString from your info plist
-version_prefix = `/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" #{info_file_path}`.chomp
+version = "#{git_details[2]}"
 
 # Update the CFBundleVersion in the info plist with our new version string
-version = version_prefix + version_suffix
 `/usr/libexec/PlistBuddy -c "Set :CFBundleVersion #{version}" #{info_file_path}`
+
+puts "CFBundleVersion set to: " + version
