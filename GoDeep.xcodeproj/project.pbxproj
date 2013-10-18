@@ -125,7 +125,7 @@
 		8DD107FE17F7CB8E00C7603A /* Deep Link Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8DD1083917F7CE4C00C7603A /* Model */,
+				8DD1083917F7CE4C00C7603A /* Models */,
 				8DD1080717F7CB8E00C7603A /* DRAppDelegate.h */,
 				8DD1080817F7CB8E00C7603A /* DRAppDelegate.m */,
 				8DD1080A17F7CB8E00C7603A /* Main.storyboard */,
@@ -157,7 +157,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8DD1083917F7CE4C00C7603A /* Model */ = {
+		8DD1083917F7CE4C00C7603A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8DD1083A17F7CE4C00C7603A /* _DRLink.h */,
@@ -165,6 +165,7 @@
 				8DD1083C17F7CE4C00C7603A /* DRLink.h */,
 				8DD1083D17F7CE4C00C7603A /* DRLink.m */,
 			);
+			name = Models;
 			path = Model;
 			sourceTree = "<group>";
 		};

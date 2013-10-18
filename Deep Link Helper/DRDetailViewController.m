@@ -11,7 +11,9 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface DRDetailViewController ()
+
 - (void)configureView;
+
 @end
 
 @implementation DRDetailViewController
