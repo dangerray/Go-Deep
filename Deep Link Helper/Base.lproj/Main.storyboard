@@ -213,15 +213,15 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to buy a copy of Go Deep to run in the iOS simulator?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-j2-j9G">
-                                <rect key="frame" x="23" y="227" width="276" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want a copy of Go Deep to run in the iOS simulator?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-j2-j9G">
+                                <rect key="frame" x="23" y="227" width="275" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc6-tu-ejG">
-                                <rect key="frame" x="96" y="269" width="131" height="30"/>
+                                <rect key="frame" x="95" y="412" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="us@dangerray.com">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,21 +230,33 @@
                                     <action selector="getInTouchButtonPressed:" destination="f62-3S-pOV" eventType="touchUpInside" id="RF3-Qm-jzp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6m-nQ-ctN">
+                                <rect key="frame" x="50" y="276" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="github.com/dangerray/Go-Deep">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="githubButtonPressed:" destination="f62-3S-pOV" eventType="touchUpInside" id="aom-xc-eQc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="j6m-nQ-ctN" firstAttribute="centerX" secondItem="V6e-j2-j9G" secondAttribute="centerX" constant="-1" id="8EA-Ox-QQv"/>
                             <constraint firstItem="IBL-ku-iuf" firstAttribute="top" secondItem="2ZW-AF-d7N" secondAttribute="bottom" constant="25" id="EBU-y0-XMA"/>
                             <constraint firstItem="flh-97-Q5m" firstAttribute="leading" secondItem="bzi-kE-gzU" secondAttribute="leading" constant="20" id="Gns-cl-VnO"/>
                             <constraint firstAttribute="centerX" secondItem="S3q-uw-E67" secondAttribute="centerX" constant="-0.5" id="K1Z-tW-MrH"/>
                             <constraint firstItem="V6e-j2-j9G" firstAttribute="top" secondItem="S3q-uw-E67" secondAttribute="bottom" constant="90" id="QLn-Od-yjl"/>
                             <constraint firstItem="S3q-uw-E67" firstAttribute="top" secondItem="IBL-ku-iuf" secondAttribute="bottom" constant="8" id="RlT-zA-rMB"/>
                             <constraint firstAttribute="centerX" secondItem="IBL-ku-iuf" secondAttribute="centerX" constant="-0.5" id="UON-aW-I2K"/>
-                            <constraint firstItem="flh-97-Q5m" firstAttribute="top" secondItem="sc6-tu-ejG" secondAttribute="bottom" constant="85" id="Wjw-l4-V5v"/>
+                            <constraint firstItem="flh-97-Q5m" firstAttribute="top" secondItem="sc6-tu-ejG" secondAttribute="bottom" constant="-58" id="Wjw-l4-V5v"/>
                             <constraint firstAttribute="centerX" secondItem="flh-97-Q5m" secondAttribute="centerX" id="XBA-Qz-v67"/>
+                            <constraint firstItem="j6m-nQ-ctN" firstAttribute="top" secondItem="V6e-j2-j9G" secondAttribute="bottom" constant="8" id="d7u-w2-olq"/>
                             <constraint firstAttribute="trailing" secondItem="flh-97-Q5m" secondAttribute="trailing" constant="20" id="g5Y-Ma-yfP"/>
-                            <constraint firstAttribute="centerX" secondItem="sc6-tu-ejG" secondAttribute="centerX" constant="-1.5" id="mG4-fb-dh1"/>
+                            <constraint firstAttribute="centerX" secondItem="sc6-tu-ejG" secondAttribute="centerX" constant="-0.5" id="mG4-fb-dh1"/>
                             <constraint firstAttribute="centerX" secondItem="V6e-j2-j9G" secondAttribute="centerX" constant="-0.5" id="qiN-H2-nEw"/>
-                            <constraint firstItem="sc6-tu-ejG" firstAttribute="top" secondItem="V6e-j2-j9G" secondAttribute="bottom" constant="1" id="tKQ-fY-9LV"/>
+                            <constraint firstItem="sc6-tu-ejG" firstAttribute="top" secondItem="V6e-j2-j9G" secondAttribute="bottom" constant="144" id="tKQ-fY-9LV"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" id="Xhm-G6-mL1">

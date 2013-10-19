@@ -37,6 +37,16 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)githubButtonPressed:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://github.com/dangerray/Go-Deep"];
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+    {
+        [[Mixpanel sharedInstance] track:@"app.about.github.launch" properties:nil];
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
 - (IBAction)getInTouchButtonPressed:(id)sender
 {
     NSURL *url = [NSURL URLWithString:@"mailto:us@dangerray.com"];
